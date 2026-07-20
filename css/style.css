@@ -4,13 +4,14 @@
     --header-fs: 3rem;
     --title-fs: 2rem;
     --normal-fs: 1.5rem;
-    --small-fs: 0.5rem;
+    --small-fs: 1rem;
     --bold-f: 700;
     --radius: 10px;
     --small-gap: 0.5em;
     --normal-gap: 1em;
     --big-gap: 2em;
-    --border: solid 2px rgb(165, 165, 165);
+    --muted: rgb(165, 165, 165);
+    --border: solid 2px var(--muted);
 }
 
 html {
@@ -58,6 +59,10 @@ a {
     font-style: italic;
 }
 
+.c-txt {
+    text-align: center;
+}
+
 .icon {
     width: var(--normal-fs);
     height: var(--normal-fs);
@@ -82,12 +87,118 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--normal-gap);
+}
+
+.name {
+    opacity: 50%;
+    cursor: default;
+}
+
+.name:hover {
+    opacity: 100%;
+}
+
+.resp-width{
+    width: 100%;
+    max-width: 650px;
+}
+
+.txt-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
 }
 
 .box {
-    flex: 1 1 0;
+    max-width: 60em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--small-gap);
+    padding: 1em;
+    justify-content: center;
+}
+
+.card {
     display: flex;
     flex-direction: column;
+    padding: 0.5em;
+    border: var(--border);
     border-radius: var(--radius);
-    gap: var(--small-gap);
+    gap: var(--normal-gap);
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: var(--small-gap);
+    }
 }
+
+.card .previews{
+    background: var(--muted);
+    display: flex;
+    width: 28rem;
+    height: 15rem;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: contain;
+    }
+}
+
+.card .description {
+    width: fit-content;
+    height: fit-content;
+    cursor: default;
+
+    p {
+        width: 100%;
+        max-width: 300px;
+        font-size: var(--small-fs);
+        font-weight: var(--bold-f);
+        opacity: 50%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+.card .description:hover {
+    p {
+        opacity: 100%;
+    }
+}
+
+.card .lang-used {
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    gap: var(--normal-gap);
+    list-style-type: none;
+
+    li {
+        display: flex;
+        position: relative;
+        font-size: var(--small-fs);
+        gap: var(--small-gap);
+        align-items: center;
+        font-weight: var(--bold-f);
+        opacity: 75%;
+    }
+
+    li::before {
+        content: "";
+        position: relative;
+        width: 0.5em;
+        height: 0.5em;
+        background: var(--foreground);
+        border-radius: 50%;
+    }
+}
+
