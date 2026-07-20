@@ -12,6 +12,7 @@
     --normal-gap: 1em;
     --big-gap: 2em;
     --muted: rgb(165, 165, 165);
+    --hovered: rgb(195, 195, 195);
     --border: solid 2px var(--muted);
     --shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
@@ -144,6 +145,10 @@ a {
         align-items: center;
         gap: var(--small-gap);
     }
+}
+
+.card:hover {
+    border: solid 2px var(--hovered);
 }
 
 .card .previews{
