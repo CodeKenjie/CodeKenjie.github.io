@@ -117,7 +117,7 @@ a {
 
 .box {
     background: var(--background);
-    max-width: 60em;
+    max-width: max(20rem, 55rem);
     display: flex;
     flex-wrap: wrap;
     gap: var(--small-gap);
@@ -126,6 +126,8 @@ a {
 }
 
 .card {
+    width: 100%;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     padding: 0.5em;
@@ -143,7 +145,7 @@ a {
 .card .previews{
     display: flex;
     background: var(--muted);
-    width: 25rem;
+    width: 100%;
     height: 13.5rem;
     border-radius: 10px;
     aspect-ratio: 16/9;
@@ -159,7 +161,7 @@ a {
 }
 
 .card .description {
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     cursor: default;
 
@@ -182,6 +184,7 @@ a {
 }
 
 .card .lang-used {
+    width: 100%;
     max-width: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -208,4 +211,3 @@ a {
         border-radius: 50%;
     }
 }
-
