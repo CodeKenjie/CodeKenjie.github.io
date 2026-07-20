@@ -1,5 +1,6 @@
 :root {
     --family: Arial, sans-serif;
+    --background: rgb(255, 255, 255);
     --foreground: #3a3a3a;
     --header-fs: 3rem;
     --title-fs: 2rem;
@@ -63,6 +64,11 @@ a {
     text-align: center;
 }
 
+.sub-header {
+    width: 100%;
+    opacity: 50%;
+}
+
 .icon {
     width: var(--normal-fs);
     height: var(--normal-fs);
@@ -71,7 +77,6 @@ a {
 .icon-box {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: var(--small-gap);
 }
 
@@ -111,6 +116,7 @@ a {
 }
 
 .box {
+    background: var(--background);
     max-width: 60em;
     display: flex;
     flex-wrap: wrap;
@@ -135,10 +141,11 @@ a {
 }
 
 .card .previews{
-    background: var(--muted);
     display: flex;
+    background: var(--muted);
     width: 25rem;
     height: 13.5rem;
+    border-radius: 10px;
     aspect-ratio: 16/9;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
