@@ -153,11 +153,11 @@ a {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
-    img {
-        flex: 1 0 100%;
-        scroll-snap-align: start;
-        object-fit: contain;
-    }
+}
+
+.card .previews img {
+    scroll-snap-align: start;
+    object-fit: contain;
 }
 
 .card .description {
@@ -166,7 +166,6 @@ a {
 
     p {
         width: 100%;
-        max-width: 300px;
         font-size: var(--small-fs);
         font-weight: var(--bold-f);
         opacity: 50%;
@@ -184,7 +183,6 @@ a {
 
 .card .lang-used {
     width: 100%;
-    max-width: 300px;
     display: flex;
     flex-wrap: wrap;
     padding: 0.5em;
