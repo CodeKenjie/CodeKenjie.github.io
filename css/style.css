@@ -1,0 +1,93 @@
+:root {
+    --family: Arial, sans-serif;
+    --foreground: #3a3a3a;
+    --header-fs: 3rem;
+    --title-fs: 2rem;
+    --normal-fs: 1.5rem;
+    --small-fs: 0.5rem;
+    --bold-f: 700;
+    --radius: 10px;
+    --small-gap: 0.5em;
+    --normal-gap: 1em;
+    --big-gap: 2em;
+    --border: solid 2px rgb(165, 165, 165);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: var(--family);
+    color: var(--foreground);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+.title-fs {
+    font-size: var(--title-fs);
+}
+
+.header-fs {
+    font-size: var(--header-fs);
+}
+
+.normal-fs {
+    font-size: var(--normal-fs);
+}
+
+.small-fs {
+    font-size: var(--small-fs);
+}
+
+.f-bold {
+    font-weight: var(--bold-f);
+}
+
+.f-italic {
+    font-style: italic;
+}
+
+.icon {
+    width: var(--normal-fs);
+    height: var(--normal-fs);
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--small-gap);
+}
+
+.s-p {
+    padding: 0.5em;
+}
+
+.n-p {
+    padding: 1em;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius);
+    gap: var(--small-gap);
+}
