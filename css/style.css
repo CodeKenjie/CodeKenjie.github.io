@@ -146,8 +146,6 @@ a {
 }
 
 .name {
-    background: var(--background);
-    border-radius: var(--radius);
     opacity: 50%;
     cursor: default;
     text-shadow: var(--shadow);
