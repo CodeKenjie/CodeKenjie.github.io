@@ -123,6 +123,10 @@ a {
     padding: 1em;
 }
 
+.l-p {
+    padding: 3em;
+}
+
 .contents {
     display: flex;
     flex-direction: column;
@@ -153,7 +157,7 @@ a {
 
 .box {
     background: var(--background);
-    max-width: max(20rem, 70rem);
+    max-width: max(20rem, 100rem);
     display: flex;
     flex-wrap: wrap;
     gap: var(--small-gap);
