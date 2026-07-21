@@ -153,7 +153,7 @@ a {
 
 .box {
     background: var(--background);
-    max-width: max(20rem, 65rem);
+    max-width: max(20rem, 70rem);
     display: flex;
     flex-wrap: wrap;
     gap: var(--small-gap);
@@ -166,7 +166,7 @@ a {
     max-width: clamp(10rem, 80vw, 30rem);
     display: flex;
     flex-direction: column;
-    padding: 0.5em;
+    padding: 1em;
     border: var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
