@@ -26,11 +26,11 @@
 }
 
 [data-theme="dark"] {
-    --background: rgb(0, 0, 0);
+    --background: rgb(51, 51, 51);
     --foreground: rgb(255, 255, 255);
     --muted: rgb(165, 165, 165);
     --hovered: rgb(195, 195, 195);
-    --shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    --shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -40,6 +40,7 @@ html {
 }
 
 body {
+    background: var(--background);
     font-family: var(--family);
     color: var(--foreground);
 }
@@ -91,6 +92,21 @@ a {
 .icon {
     width: var(--normal-fs);
     height: var(--normal-fs);
+}
+
+.themeBtn {
+    background: transparent;
+    color: var(--foreground);
+    padding: 0.5em;
+    font-size: var(--small-fs);
+    border: var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.themeBtn:hover {
+    opacity: 100%;
 }
 
 .icon-box {
@@ -165,6 +181,10 @@ a {
 
 .card:hover {
     border: solid 2px var(--hovered);
+
+    .description p {
+        opacity: 100%;
+    }
 }
 
 .card .previews{
@@ -196,12 +216,6 @@ a {
         overflow-wrap: break-word;
         word-wrap: break-word;
         white-space: normal;
-    }
-}
-
-.card .description:hover {
-    p {
-        opacity: 100%;
     }
 }
 
