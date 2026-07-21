@@ -28,7 +28,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     window.addEventListener(`resize`, resize);
 
     const particle = [];
-    const COUNT = Math.floor(window.innerWidth / 15);
+    const COUNT = Math.floor(window.innerWidth / 30);
     for(let i = 0; i < COUNT; i++){
         particle.push({
             x: Math.random() * canvas.width,
