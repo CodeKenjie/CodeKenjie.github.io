@@ -210,7 +210,7 @@ a {
 
     p {
         width: 100%;
-        font-size: var(--small-fs);
+        font-size: var(--normal-fs);
         font-weight: var(--bold-f);
         opacity: 50%;
         overflow-wrap: break-word;
