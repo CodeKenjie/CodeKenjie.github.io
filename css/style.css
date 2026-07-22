@@ -1,7 +1,8 @@
 :root {
     --family: Arial, sans-serif;
     --background: rgb(255, 255, 255);
-    --foreground: #3a3a3a;
+    --foreground: rgb(58, 58, 58);
+    --alt-foreground: rgb(255, 255, 255);
     --header-fs: clamp(2rem, 1.5rem + 2vw, 3rem);
     --title-fs: clamp(1.5rem, 1.2rem + 1vw, 2rem);
     --normal-fs: clamp(1rem, 0.9rem + 0.8vw, 1.5rem);
@@ -38,9 +39,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 100%;
-    margin: 0;
-}
+    font-size: 100%; margin: 0; }
 
 body {
     background: var(--background);
@@ -220,6 +219,27 @@ a {
     .description p {
         opacity: 100%;
     }
+}
+
+.card .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .header a {
+    flex: 1 1 0;
+}
+
+.card .header .source {
+    background: var(--background);
+    color: var(--foreground);
+    font-size: var(--small-fs);
+    padding: 0.5em;
+    border: var(--border);
+    border-radius: var(--radius);
+    opacity: 75%;
 }
 
 .card .previews{

@@ -72,8 +72,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     function update(){
         for(const p of particle){
-            p.x += p.vx;
-            p.y += p.vy;
+            p.x += p.vx * 0.5;
+            p.y += p.vy * 0.5;
 
             if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
             if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
