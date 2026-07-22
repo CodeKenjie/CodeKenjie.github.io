@@ -25,7 +25,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             index = (index + 1) % images.length;
 
             prev.scrollTo({
-                left: index * prev.clientWidth,
+                left: images[index].offsetLeft,
                 behavior: `smooth`
             });
         }
@@ -39,6 +39,12 @@ document.addEventListener(`DOMContentLoaded`, () => {
             interval = setInterval(nextImage, 5000);
         });
 
+        prev.addEventListener(`touchstart`, () => {
+            clearInterval(interval);
+        });
+        prev.addEventListener(`touchend`, () => {
+            interval = setInterval(nextImage, 5000);
+        });
     });
 
     const canvas = document.getElementById(`bg`);
