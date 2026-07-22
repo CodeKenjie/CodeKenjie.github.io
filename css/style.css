@@ -94,6 +94,17 @@ a {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sub-header {
     width: 100%;
     opacity: 50%;
