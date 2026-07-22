@@ -16,6 +16,31 @@ document.addEventListener(`DOMContentLoaded`, () => {
         newTheme === `dark` ? themeBtn.textContent = `Wake up!` : themeBtn.textContent = `Go to sleep`;
     });
 
+    const previews = document.querySelectorAll(`.previews`);
+    previews.forEach(prev => {
+        const images = prev.querySelectorAll(`img`);
+        let index = 0;
+
+        function nextImage(){
+            index = (index + 1) % images.length;
+
+            prev.scrollTo({
+                left: index * prev.clientWidth,
+                behavior: `smooth`
+            });
+        }
+
+        let interval = setInterval(nextImage, 5000);
+
+        prev.addEventListener(`mouseenter`, () => {
+            clearInterval(interval);
+        });
+        prev.addEventListener(`mouseleave`, () => {
+            interval = setInterval(nextImage, 5000);
+        });
+
+    });
+
     const canvas = document.getElementById(`bg`);
     const ctx = canvas.getContext(`2d`);
 

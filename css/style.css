@@ -227,14 +227,15 @@ a {
     background: var(--muted);
     width: 100%;
     height: 17rem;
-    border-radius: 10px;
     aspect-ratio: 16/9;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
 .card .previews img {
+    height: 100%;
     scroll-snap-align: start;
     object-fit: contain;
 }
