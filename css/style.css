@@ -5,6 +5,7 @@
     --alt-foreground: rgb(255, 255, 255);
     --header-fs: clamp(2rem, 1.5rem + 2vw, 3rem);
     --title-fs: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    --big-fs: clamp(1.2rem, 1rem + 0.9vw, 1.7rem);
     --normal-fs: clamp(1rem, 0.9rem + 0.8vw, 1.5rem);
     --small-fs: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
     --bold-f: 700;
@@ -71,6 +72,10 @@ a {
 
 .header-fs {
     font-size: var(--header-fs);
+}
+
+.big-fs {
+    font-size: var(--big-fs);
 }
 
 .normal-fs {
@@ -158,7 +163,55 @@ a {
     gap: var(--normal-gap);
 }
 
+.resume {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.resume > .section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background: var(--background);
+
+    h3 {
+        font-style: italic;
+        font-size: var(--title-fs);
+        cursor: default;
+        text-shadow: var(--shadow);
+        animation: static-light 2s ease;
+    }
+
+    p {
+        text-align: justify;
+        text-indent: 4em;
+        font-size: var(--normal-fs);
+    }
+
+}
+
+.section dl {
+    padding: 1em 0 1em 2em;
+}
+
+.section dt {
+    font-size: var(--big-fs);
+    font-weight: var(--bold-f);
+    font-style: italic;
+}
+
+.section dd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: var(--normal-fs);
+    padding-left: 2em;
+    text-align: justify;
+}
+
 .name {
+    font-size: var(--header-fs);
     cursor: default;
     text-shadow: var(--shadow);
     animation: static-light 2s ease;
