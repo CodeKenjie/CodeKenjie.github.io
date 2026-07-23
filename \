@@ -162,7 +162,7 @@ a {
     opacity: 50%;
     cursor: default;
     text-shadow: var(--shadow);
-    animation: static-light 2s ease;
+    animation: static-light 3s ease;
 }
 
 .background {
@@ -241,7 +241,6 @@ a {
     border: var(--border);
     border-radius: var(--radius);
     opacity: 75%;
-    cursor: default;
 }
 
 .card .previews{
