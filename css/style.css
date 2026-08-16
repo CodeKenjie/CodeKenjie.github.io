@@ -281,10 +281,6 @@ a {
     align-items: center;
 }
 
-.card .header a {
-    flex: 1 1 0;
-}
-
 .card .header .source {
     background: var(--background);
     color: var(--foreground);
@@ -294,6 +290,12 @@ a {
     border-radius: var(--radius);
     opacity: 75%;
     cursor: default;
+}
+
+.card .header .live {
+    background: green;
+    border-radius: var(--radius);
+    cursor: pointer;
 }
 
 .card .previews{
