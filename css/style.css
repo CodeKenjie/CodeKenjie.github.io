@@ -36,7 +36,6 @@
 }
 
 html {
-    box-sizing: border-box;
     font-size: 100%; margin: 0; }
 
 body {
@@ -46,6 +45,7 @@ body {
 }
 
 *, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -447,6 +447,7 @@ a {
 
 .list {
     display: grid;
+    justify-items: center;
     width: 100%;
     gap: 0.5em;
 }
@@ -456,6 +457,7 @@ a {
     border: var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    width: 100%;
 
     h2 {
         font-size: var(--title-fs);
