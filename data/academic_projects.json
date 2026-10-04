@@ -12,7 +12,7 @@
         "description": "Notes is my very first program that I created during my first year. It's a terminal based (CLI) notes, using txt files as a makeshift database. (Personal Project)",
         "tech": [
             "Cpp",
-            "txt file"
+            "Txt file as Database"
         ]
     },
     {
