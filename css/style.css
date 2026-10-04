@@ -17,7 +17,6 @@
     --hovered: rgb(195, 195, 195);
     --border: solid 2px var(--muted);
     --shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    --particles: rbg(0, 0, 0);
 }
 
 [data-theme="light"] {
@@ -26,7 +25,6 @@
     --muted: rgb(165, 165, 165);
     --hovered: rgb(195, 195, 195);
     --shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    --particles: rbg(0, 0, 0);
 }
 
 [data-theme="dark"] {
@@ -35,7 +33,6 @@
     --muted: rgb(165, 165, 165);
     --hovered: rgb(195, 195, 195);
     --shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
-    --particles: rbg(255, 255, 255);
 }
 
 html {
@@ -46,14 +43,6 @@ body {
     background: var(--background);
     font-family: var(--family);
     color: var(--foreground);
-}
-
-canvas {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 }
 
 *, *::before, *::after {
@@ -99,11 +88,21 @@ a {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 0.5em;
+    width: 100%;
+}
+
+.container > :first-child {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.container > :last-child {
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .separator {
@@ -156,39 +155,83 @@ a {
     padding: 3em;
 }
 
+.w-full {
+    width: 100%;
+}
+
+.mt-lg {
+    margin-top: 5em;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--normal-gap);
+    list-style-type: none;
+    font-size: var(--normal-fs);
+
+    & li {
+        position: relative;
+        padding: 0.5em;
+        border-radius: var(--radius);
+        opacity: 50%;
+        cursor: pointer;
+    }
+
+    & li::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--foreground);
+        border-radius: 1em;
+        transition: width 300ms ease;
+    }
+
+    & li:hover::before {
+        width: 100%;
+    }
+
+    & li:hover {
+        opacity: 100%;
+    }
+
+    & li.active {
+        opacity: 100%;
+    }
+
+    & li.active::before {
+        width: 100%;
+    }
+}
+
 .contents {
+    display: flex;
+    justify-content: center;
+
+}
+
+.contents > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--normal-gap);
-}
-
-.resume {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.resume > .section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    background: var(--background);
-
-    h3 {
-        font-style: italic;
-        font-size: var(--title-fs);
-        cursor: default;
-        text-shadow: var(--shadow);
-        animation: static-light 2s ease;
-    }
-
-    p {
-        text-align: justify;
-        text-indent: 4em;
-        font-size: var(--normal-fs);
-    }
-
+    width: 100%;
+    max-width: max(20rem, 100rem);
 }
 
 .section dl {
@@ -237,23 +280,24 @@ a {
     gap: var(--small-gap);
 }
 
+.tab-panel:not(.active) {
+    display: none;
+}
+
 .box {
-    max-width: max(20rem, 100rem);
     display: flex;
     flex-wrap: wrap;
     gap: var(--small-gap);
-    padding: 1em;
     justify-content: center;
     border-radius: var(--radius);
 }
 
-.card {
+.box .card {
     display: flex;
     flex-direction: column;
     background: var(--background);
     width: 100%;
     max-width: clamp(10rem, 80vw, 30rem);
-    padding: 1em;
     border: var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -266,22 +310,22 @@ a {
     }
 }
 
-.card:hover {
+.box .card:hover {
     border: solid 2px var(--hovered);
 
-    .description p {
+    .description {
         opacity: 100%;
     }
 }
 
-.card .header {
+.box .card .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.card .header .source {
+.box .card .header .source {
     background: var(--background);
     color: var(--foreground);
     font-size: var(--small-fs);
@@ -292,13 +336,13 @@ a {
     cursor: pointer;
 }
 
-.card .header .live {
+.box .card .header .live {
     background: green;
     border-radius: var(--radius);
     cursor: pointer;
 }
 
-.card .previews{
+.box .card .previews{
     display: flex;
     background: var(--background);
     width: 100%;
@@ -311,28 +355,25 @@ a {
     scrollbar-width: thin;
 }
 
-.card .previews img {
+.box .card .previews img {
     height: 100%;
     scroll-snap-align: start;
     object-fit: contain;
 }
 
-.card .description {
+.box .card .description {
     flex: 1 1 0;
     cursor: default;
-
-    p {
-        width: 100%;
-        font-size: var(--normal-fs);
-        font-weight: var(--bold-f);
-        opacity: 50%;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        white-space: normal;
-    }
+    width: 100%;
+    font-size: var(--normal-fs);
+    font-weight: var(--bold-f);
+    opacity: 50%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal n-p;
 }
 
-.card .lang-used {
+.box .card .lang-used {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -360,6 +401,53 @@ a {
     }
 }
 
+.list {
+    display: grid;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.list .item {
+    background-color: var(--background);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    h2 {
+        font-size: var(--title-fs);
+    }
+
+    p {
+        font-size: var(--normal-fs);
+    }
+}
+
+.list .item .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        display: flex;
+        gap: var(--normal-gap);
+        align-items: center;
+
+        p {
+            font-size: var(--small-fs);
+        }
+    }
+}
+
+.list .item ul {
+    padding: 0.5em 0 1em 4em;
+    
+    li {
+        font-size: var(--normal-fs);
+    }
+}
+
+
 @keyframes static-light {
     0%{
         opacity: 100%;
@@ -379,5 +467,22 @@ a {
         opacity: 50%;
     } 100% {
         opacity: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .container > :first-child,
+    .container > :last-child {
+        justify-content: center;
+        text-align: center;
+    } 
+
+    .separator {
+        display: none;
     }
 }

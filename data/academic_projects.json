@@ -1,0 +1,122 @@
+[
+    {
+        "year": "First year",
+        "title": "Notes",
+        "repo": "https://github.com/CodeKenjie/notes.git",
+        "button": { "label": "Open Source" },
+        "images": [
+            "images/notes/notes2.png",
+            "images/notes/notes3.png",
+            "images/notes/notes4.png"
+        ],
+        "description": "Notes is my very first program that I created during my first year. It's a terminal based (CLI) notes, using txt files as a makeshift database. (Personal Project)",
+        "tech": [
+            "Cpp",
+            "txt file"
+        ]
+    },
+    {
+        "year": "First year",
+        "title": "Inventory System",
+        "repo": "https://github.com/CodeKenjie/inventoryApp.git",
+        "button": { "label": "Open Source" },
+        "images": [
+            "images/InventoryApp/InventoryApp1.png",
+            "images/InventoryApp/InventoryApp2.png"
+        ],
+        "description": "This is my project for our Object Oriented Programming (OOP) subject, this is just a simple Inventory System with action logs. nothing else to say its just Inventory.",
+        "tech": [
+            "Java",
+            "SQLite3"
+        ]
+    },
+    {
+        "year": "First year",
+        "title": "Vote Management System",
+        "repo": "https://github.com/CodeKenjie/VoteManagementSystem.git",
+        "button": { "label": "Open Source" },
+        "images": [
+            "images/VoteManagementSystem/VoteManagementSystem1.png",
+            "images/VoteManagementSystem/VoteManagementSystem2.png",
+            "images/VoteManagementSystem/VoteManagementSystem4.png",
+            "images/VoteManagementSystem/VoteManagementSystem5.png",
+            "images/VoteManagementSystem/VoteManagementSystem6.png",
+            "images/VoteManagementSystem/VoteManagementSystem7.png",
+            "images/VoteManagementSystem/VoteManagementSystem8.png",
+            "images/VoteManagementSystem/VoteManagementSystem9.png"
+        ],
+        "description": "This is a Vote Management System created for our Object Oriented Programming (OOP) subject, you can add candidates and make people register before voting, it just count how many people voted a registered candidate.",
+        "tech": [
+            "Java",
+            "SQLite3"
+        ]
+    },
+    {
+        "year": "Second year",
+        "title": "STSA",
+        "repo": "https://github.com/CodeKenjie/STSA.git",
+        "button": { "label": "Visit", "link": "https://stsa.onrender.com/" },
+        "images": [
+            "images/stsa/stsa1.png",
+            "images/stsa/stsa2.png",
+            "images/stsa/stsa3.png",
+            "images/stsa/stsa4.png",
+            "images/stsa/stsa5.png"
+        ],
+        "description": "STSA is my very first actual website that I created during my 2nd year of college using Node JS, this is a web-base student activity management for students to manage their activities, and schedules. it's not responsive tho and there's so many UI/UX error.",
+        "tech": [
+            "JavaScript (Node.js)",
+            "HTML",
+            "CSS",
+            "MongoDB"
+        ]
+    },
+    {
+        "year": "Second year",
+        "title": "PCF-Care",
+        "repo": "https://github.com/CodeKenjie/PCF-CareWise.git",
+        "button": { "label": "Visit", "link": "https://pcf-care.site/login" },
+        "images": [
+            "images/PCF-Care/PCF-Care1.png",
+            "images/PCF-Care/PCF-Care3.png",
+            "images/PCF-Care/PCF-Care4.png",
+            "images/PCF-Care/PCF-Care2.png",
+            "images/PCF-Care/PCF-Care5.png",
+            "images/PCF-Care/PCF-Care6.png",
+            "images/PCF-Care/PCF-Care7.png",
+            "images/PCF-Care/PCF-Care8.png",
+            "images/PCF-Care/PCF-Care9.png",
+            "images/PCF-Care/PCF-Care10.png",
+            "images/PCF-Care/PCF-Care11.png"
+        ],
+        "description": "PCF-Care is a Web-Based Patient Record Management Built for Philadelphia Christcentered Fellowship (PCF) located at # 26 Lunas Street, Quezon City, Philippines, 1114, It has built-in Inventory System, Patient Diagnosis and Prescription, Distribution feature, Scheduling, and Maintenance tracker, and responsive design. It is built to help clinic staff transition from paper-base to a digital base Management.",
+        "tech": [
+            "PHP",
+            "JavaScript",
+            "CSS",
+            "Nginx",
+            "MVC Architecture",
+            "Docker",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "year": "Third year",
+        "title": "Elcinorhc",
+        "repo": "https://github.com/CodeKenjie/elcinorhc",
+        "button": { "label": "Download", "link": "https://github.com/CodeKenjie/elcinorhc/releases/tag/v0.1.1" },
+        "images": [
+            "images/Elcinorhc/1.png",
+            "images/Elcinorhc/2.png",
+            "images/Elcinorhc/3.png",
+            "images/Elcinorhc/4.png"
+        ],
+        "description": "Elcinorhc is a mobile app created using Dart with Flutter Frameworks this app is a very simple todo app with planning and journal all stored locally using SQLite Drift library but also has some public share feature where you can share your journal in public using google firebase cloud, authentication feature using google firebase auth is also used, I also learned about Feature-Based Clean Architecture.",
+        "tech": [
+            "Flutter",
+            "Feature-Based Clean Architecture",
+            "SQLite3",
+            "Google Firebase"
+        ]
+    }
+]
