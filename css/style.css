@@ -484,7 +484,7 @@ a {
 }
 
 .list .item ul {
-    padding: 0.5em 0 1em 4em;
+    padding: 0.5em 0 1em clamp(2em, 8vw, 4em);
     
     li {
         font-size: var(--normal-fs);
@@ -528,9 +528,5 @@ a {
 
     .separator {
         display: none;
-    }
-
-    .list .item ul {
-        padding-left: 2em;
     }
 }
