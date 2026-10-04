@@ -529,4 +529,8 @@ a {
     .separator {
         display: none;
     }
+
+    .list .item ul {
+        padding-left: 2em;
+    }
 }
