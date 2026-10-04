@@ -175,14 +175,55 @@ a {
     height: fit-content;
 }
 
-.nav {
+.nav-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: var(--normal-gap);
+
+    button {
+        padding: 0.5em;
+        border-radius: var(--radius);
+        border: none;
+        background-color: var(--background);
+        color: var(--foreground);
+        cursor: pointer;
+        font-size: var(--normal-fs);
+        width: 2em;
+        height: 2em;
+    }
+
+    button:hover {
+        background-color: var(--hovered);
+    }
+
+    button:disabled {
+        opacity: 30%;
+        cursor: default;
+    }
+
+    button[hidden] {
+        display: none;
+    }
+}
+
+.nav {
+    flex: 1;
+    min-width: 0;
+    display: flex;
     gap: var(--normal-gap);
     list-style-type: none;
     font-size: var(--normal-fs);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
 
-    & li {
+    li {
+        scroll-snap-align: start;
+        user-select: none;
+        flex-shrink: 0;
+        white-space: nowrap;
         position: relative;
         padding: 0.5em;
         border-radius: var(--radius);
@@ -190,7 +231,7 @@ a {
         cursor: pointer;
     }
 
-    & li::before {
+    li::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -202,21 +243,24 @@ a {
         transition: width 300ms ease;
     }
 
-    & li:hover::before {
+    li:hover::before {
         width: 100%;
     }
 
-    & li:hover {
+    li:hover {
         opacity: 100%;
     }
 
-    & li.active {
+    li.active {
         opacity: 100%;
     }
 
-    & li.active::before {
+    li.active::before {
         width: 100%;
     }
+
+    li:first-child { margin-left: auto; }
+    li:last-child { margin-right: auto; }
 }
 
 .contents {
@@ -370,7 +414,7 @@ a {
     opacity: 50%;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    white-space: normal n-p;
+    white-space: wrap;
 }
 
 .box .card .lang-used {

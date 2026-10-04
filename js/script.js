@@ -132,8 +132,40 @@ document.addEventListener(`DOMContentLoaded`, async () => {
 
             tab.classList.add('active');
             document.getElementById(tab.dataset.target).classList.add('active');
+            tab.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
         });
     });
+
+    const nav = document.querySelector('.nav');
+    const navLeft = document.getElementById('navLeft');
+    const navRight = document.getElementById('navRight');
+
+    function updateNavArrows() {
+        const overflowing = nav.scrollWidth > nav.clientWidth + 1;
+
+        navLeft.hidden = !overflowing;
+        navRight.hidden = !overflowing;
+
+        navLeft.disabled = nav.scrollLeft <= 0;
+        navRight.disabled = nav.scrollLeft + nav.clientWidth >= nav.scrollWidth - 1;
+    }
+
+    const items = [...nav.children];
+    navLeft.addEventListener('click', () => {
+        const edge = nav.getBoundingClientRect().left;
+        const prev = [...items].reverse().find(li => li.getBoundingClientRect().left < edge - 1);
+        prev?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    });
+
+    navRight.addEventListener('click', () => {
+        const edge = nav.getBoundingClientRect().left;
+        const next = items.find(li => li.getBoundingClientRect().left > edge + 1);
+        next?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    });
+
+    nav.addEventListener('scroll', updateNavArrows);
+    new ResizeObserver(updateNavArrows).observe(nav);
+    updateNavArrows();
 
     try {
         const [projects, experience ] = await Promise.all([
