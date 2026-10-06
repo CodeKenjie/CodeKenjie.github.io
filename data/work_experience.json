@@ -1,30 +1,18 @@
 [
     {
-        "company": "Sanford Marketing Corp. (SM Savemore Market)",
+        "company": "TechNavyPhil Software Company",
         "duration": { 
-            "from": "September 8, 2022", 
-            "to": "February 8, 2023" 
+            "from": "July 26, 2026", 
+            "to": "December 26, 2026" 
         },
-        "company_address": "Alapan St., Imus, 4103 Cavite",
-        "position": "Selling Clerk",
+        "company_address": "3F, The Garden Walk, Cainta Riza",
+        "position": "Web Developer Intern",
         "tasks": [
-            "Maintained product availability by restocking shelves.",
-            "Assisted in organizing and managing warehouse.",
-            "Provided customer service and supported checkout operations by assisting as a bagger when needed."
-        ]
-    },
-    {
-        "company": "Appen Services Philippines (Local Project)",
-        "duration": { 
-            "from": "March 13, 2023", 
-            "to": "June 24, 2023" 
-        },
-        "company_address": "Advincula Avenue, Imus, Cavite",
-        "position": "Data Processing Associate",
-        "tasks": [
-            "Collected and annotated video data by timestamping and identifying human movements for use in training and improving artificial intelligence (AI) models.",
-            "Conducted accessibility testing on websites by evaluating their usability and compliance with accessibility requirements, and completed Microsoft Accessibility training/certification required for the project.",
-            "Followed project guidelines and quality standards while maintaining accuracy, consistency, and attention to detail across assigned tasks."
+            "Developed and maintained web application features based on assigned development tickets.",
+            "Investigated and fixed bugs identified during QA testing, improving application reliability and user experience.",
+            "Worked with Ruby on Rails, React, TypeScript, GraphQL, and Tailwind CSS to implement and refine application features.",
+            "Collaborated with developers and QA to troubleshoot issues, validate fixes, and deliver completed tickets.",
+            "Contributed to frontend and backend development, including React components, GraphQL mutations, Rails models, and database changes."
         ]
     },
     {
@@ -42,19 +30,31 @@
         ]
     },
     {
-        "company": "TechNavyPhil Software Company",
+        "company": "Appen Services Philippines (Local Project)",
         "duration": { 
-            "from": "July 26, 2026", 
-            "to": "December 26, 2026" 
+            "from": "March 13, 2023", 
+            "to": "June 24, 2023" 
         },
-        "company_address": "3F, The Garden Walk, Cainta Riza",
-        "position": "Web Developer Intern",
+        "company_address": "Advincula Avenue, Imus, Cavite",
+        "position": "Data Processing Associate",
         "tasks": [
-            "Developed and maintained web application features based on assigned development tickets.",
-            "Investigated and fixed bugs identified during QA testing, improving application reliability and user experience.",
-            "Worked with Ruby on Rails, React, TypeScript, GraphQL, and Tailwind CSS to implement and refine application features.",
-            "Collaborated with developers and QA to troubleshoot issues, validate fixes, and deliver completed tickets.",
-            "Contributed to frontend and backend development, including React components, GraphQL mutations, Rails models, and database changes."
+            "Collected and annotated video data by timestamping and identifying human movements for use in training and improving artificial intelligence (AI) models.",
+            "Conducted accessibility testing on websites by evaluating their usability and compliance with accessibility requirements, and completed Microsoft Accessibility training/certification required for the project.",
+            "Followed project guidelines and quality standards while maintaining accuracy, consistency, and attention to detail across assigned tasks."
+        ]
+    },
+    {
+        "company": "Sanford Marketing Corp. (SM Savemore Market)",
+        "duration": { 
+            "from": "September 8, 2022", 
+            "to": "February 8, 2023" 
+        },
+        "company_address": "Alapan St., Imus, 4103 Cavite",
+        "position": "Selling Clerk",
+        "tasks": [
+            "Maintained product availability by restocking shelves.",
+            "Assisted in organizing and managing warehouse.",
+            "Provided customer service and supported checkout operations by assisting as a bagger when needed."
         ]
     }
 ]
