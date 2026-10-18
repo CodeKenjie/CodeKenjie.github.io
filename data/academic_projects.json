@@ -32,7 +32,7 @@
     },
     {
         "year": "First year",
-        "title": "Vote Management System",
+        "title": "Vote Management",
         "repo": "https://github.com/CodeKenjie/VoteManagementSystem.git",
         "button": { "label": "Open Source" },
         "images": [
