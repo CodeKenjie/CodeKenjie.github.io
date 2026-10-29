@@ -11,6 +11,7 @@
         ],
         "description": "Notes is my very first program that I created during my first year. It's a terminal based (CLI) notes, using txt files as a makeshift database. (Personal Project)",
         "tech": [
+            "Git",
             "Cpp",
             "Txt file as Database"
         ]
@@ -26,6 +27,7 @@
         ],
         "description": "This is my project for our Object Oriented Programming (OOP) subject, this is just a simple Inventory System with action logs. nothing else to say its just Inventory.",
         "tech": [
+            "Git",
             "Java",
             "SQLite3"
         ]
@@ -47,6 +49,7 @@
         ],
         "description": "This is a Vote Management System created for our Object Oriented Programming (OOP) subject, you can add candidates and make people register before voting, it just count how many people voted a registered candidate.",
         "tech": [
+            "Git",
             "Java",
             "SQLite3"
         ]
@@ -65,6 +68,7 @@
         ],
         "description": "STSA is my very first actual website that I created during my 2nd year of college using Node JS, this is a web-base student activity management for students to manage their activities, and schedules. it's not responsive tho and there's so many UI/UX error.",
         "tech": [
+            "Git",
             "JavaScript (Node.js)",
             "HTML",
             "CSS",
@@ -91,6 +95,7 @@
         ],
         "description": "PCF-Care is a Web-Based Patient Record Management Built for Philadelphia Christcentered Fellowship (PCF) located at # 26 Lunas Street, Quezon City, Philippines, 1114, It has built-in Inventory System, Patient Diagnosis and Prescription, Distribution feature, Scheduling, and Maintenance tracker, and responsive design. It is built to help clinic staff transition from paper-base to a digital base Management.",
         "tech": [
+            "Git",
             "PHP",
             "JavaScript",
             "CSS",
@@ -113,6 +118,7 @@
         ],
         "description": "Elcinorhc is a mobile app created using Dart with Flutter Frameworks this app is a very simple todo app with planning and journal all stored locally using SQLite Drift library but also has some public share feature where you can share your journal in public using google firebase cloud, authentication feature using google firebase auth is also used, I also learned about Feature-Based Clean Architecture.",
         "tech": [
+            "Git",
             "Flutter",
             "Feature-Based Clean Architecture",
             "SQLite3",
